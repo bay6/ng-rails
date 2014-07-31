@@ -1,5 +1,12 @@
 ng = angular.module('popcornApp', [])
 ng.controller 'MoviesController', ["$scope", ($scope) ->
+
+  $scope.addFavorite = (movie) ->
+    movie.isFavorite = true
+
+  $scope.removeFavorite = (movie) ->
+    movie.isFavorite = false
+
   $scope.movies = [
     {
       youtubeId: "8Eg6yIwP2vs",
