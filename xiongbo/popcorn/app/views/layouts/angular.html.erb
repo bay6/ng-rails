@@ -26,17 +26,22 @@
       </div>
     </div>
 
-    <div class="container" id="primary">
-      <div class="row">
-        <div id="main" ng-view></div>
-      </div>
-    </div> <!-- /container -->
-
     <div ng-controller="MoviesController">
       <div class="container">
         <div class="row">
           <div ng-repeat="movie in movies" class="col-md-4 col-sm-6 col-xs-12">
-            {{movie.title}}
+            <div class="movie-container">
+              <a href="/movie/{{movie.youtubeId}}">
+                <div class="thumbnail">
+                  <div class="poster img-rounded">
+                    <img ng-src="{{movie.posterUrl}}" class="" alt="{{movie.title}}" />
+                  </div> <!-- end "poster img-rounded"-->
+                </div> <!-- end "thumbnail"-->
+                <div class="title">
+                  {{movie.title}}
+                </div> <!-- end "title"--> 
+              </a>
+            </div>
           </div>
         </div>
       </div>
