@@ -1,4 +1,9 @@
-angular.module('popcornApp', [])
+angular.module('popcornApp', ['ngRoute'])
+  .config ($routeProvider, $locationProvider) ->
+    $routeProvider
+      .when('/', {controller: 'MoviesController', templateUrl: '/templates/movies.html'})
+      .otherwise({redirectTo: '/'})
+    $locationProvider.html5Mode(true)
   .controller('MoviesController', ($scope) ->
     $scope.addFavorite = (movie) ->
       movie.isFavorite = true
@@ -62,4 +67,6 @@ angular.module('popcornApp', [])
           posterUrl: "http://i.imgur.com/NtnxM9p.jpg"
         }
       ]
+  ).controller('MovieController', ($scope) ->
+    console.log('MovieController')
   )
