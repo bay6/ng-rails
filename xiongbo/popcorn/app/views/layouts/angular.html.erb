@@ -33,6 +33,13 @@
     </div> <!-- /container -->
 
     <div ng-controller="MoviesController">
+      <div class="container">
+        <div class="row">
+          <div ng-repeat="movie in movies" class="col-md-4 col-sm-6 col-xs-12">
+            {{movie.title}}
+          </div>
+        </div>
+      </div>
     </div>
 
     <div id="f">
