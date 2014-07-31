@@ -34,8 +34,24 @@
     </div> <!-- /container -->
 
     <div ng-controller="MoviesController">
-      Hello {{ user.name }}!
-      <input type="text" ng-model="user.name" placeholder="Name here" />
+      <div class="container">
+        <div class="row">
+          <div ng-repeat="movie in movies" class="col-md-4 col-sm-6 col-xs-12">
+            <div class="movie-container">
+              <a href="/movie/{{movie.youtubeId}}">
+                <div class="thumbnail">
+                  <div class="poster img-rounded">
+                    <img ng-src="{{movie.posterUrl}}" class="" alt="{{movie.title}}" />
+                  </div> <!-- end "poster img-rounded"-->
+                </div> <!-- end "thumbnail"-->
+                <div class="title">
+                  {{movie.title}}
+                </div> <!-- end "title"-->
+              </a>
+            </div> <!-- end "movie-container"-->
+          </div>
+        </div>
+      </div>
     </div>
 
     <div id="f">
