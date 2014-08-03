@@ -1,6 +1,7 @@
 angular.module('popcornApp', [
     'ngRoute',
-    'popcornApp.controllers'
+    'popcornApp.controllers',
+    'popcornApp.services'
   ])
   .config ($routeProvider, $locationProvider) ->
     $routeProvider
