@@ -1,4 +1,8 @@
-ng = angular.module('popcornApp', ['ngRoute', 'popcornApp.controllers'])
+ng = angular.module('popcornApp', 
+  ['ngRoute', 
+   'popcornApp.controllers',
+   'popcornApp.services'
+  ])
 
 ng.config ($routeProvider, $locationProvider) ->
   $routeProvider.when('/movies/:movie_id', 
