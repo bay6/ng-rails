@@ -1,5 +1,5 @@
 angular.module('popcornApp.controllers')
-  .controller('MoviesController', ($scope, MoviesService) ->
+  .controller 'MoviesController', ($scope, MoviesService) ->
     $scope.movies = MoviesService.movies()
 
     $scope.addFavorite = (movie) ->
@@ -7,4 +7,3 @@ angular.module('popcornApp.controllers')
 
     $scope.removeFavorite = (movie) ->
       movie.isFavorite = false
-  )
