@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  match '*path' => "popcorn#index", :via => [:get, :post]
   get 'popcorn/index'
   root 'popcorn#index'
 
